@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:recipto/home/components/price.dart';
 import 'package:recipto/widgets/my_button.dart';
 
 class ProductCard extends StatelessWidget {
+  final double originalPrice;
+  final double discountedPrice;
   final String imagePath;
   final double imageHeight;
   final double imageWidth;
@@ -12,6 +15,8 @@ class ProductCard extends StatelessWidget {
 
   const ProductCard({
     super.key,
+    required this.originalPrice,
+    required this.discountedPrice,
     required this.imagePath,
     required this.imageHeight,
     required this.imageWidth,
@@ -65,16 +70,10 @@ class ProductCard extends StatelessWidget {
               ),
             ),
             Flexible(
-              flex: 1,
-              child: Text(
-                title2,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.start,
-              ),
-            ),
+                flex: 1,
+                child: PriceDisplay(
+                    originalPrice: originalPrice,
+                    discountedPrice: discountedPrice)),
             const SizedBox(height: 5),
             Flexible(
               flex: 1,

@@ -62,6 +62,8 @@ class _HomePageState extends State<HomePage> {
       title2: '₹120  ₹25 OFF',
       button: 'Claim',
       coins: '110 ',
+      originalPrice: 120,
+      discountedPrice: 25,
     ),
     ProductData(
       imagePath: 'assets/images/product_squeaky_balls.png',
@@ -71,6 +73,8 @@ class _HomePageState extends State<HomePage> {
       title2: '₹60  ₹10 OFF',
       button: 'Claim',
       coins: '40 ',
+      originalPrice: 60,
+      discountedPrice: 10,
     ),
     ProductData(
       imagePath: 'assets/images/product_drools.png',
@@ -80,6 +84,8 @@ class _HomePageState extends State<HomePage> {
       title2: '₹120 ₹25OFF',
       button: 'Claim',
       coins: '300 ',
+      originalPrice: 145,
+      discountedPrice: 120,
     ),
     ProductData(
       imagePath: 'assets/images/product_farmina_dog_food.png',
@@ -89,6 +95,8 @@ class _HomePageState extends State<HomePage> {
       title2: '₹120 ₹25 OFF',
       button: 'CLaim',
       coins: '400 ',
+      originalPrice: 145,
+      discountedPrice: 120,
     ),
   ];
 
@@ -210,6 +218,10 @@ class _HomePageState extends State<HomePage> {
                       title2: productDataList[productIndex].title2,
                       button: productDataList[productIndex].button,
                       coins: productDataList[productIndex].coins,
+                      originalPrice:
+                          productDataList[productIndex].originalPrice,
+                      discountedPrice:
+                          productDataList[productIndex].discountedPrice,
                     );
                   } else {
                     return const SizedBox
@@ -248,6 +260,8 @@ class CouponData {
 }
 
 class ProductData {
+  final double originalPrice;
+  final double discountedPrice;
   final String imagePath;
   final double imageHeight;
   final double imageWidth;
@@ -257,6 +271,8 @@ class ProductData {
   final String button;
 
   ProductData({
+    required this.originalPrice,
+    required this.discountedPrice,
     required this.imagePath,
     required this.imageHeight,
     required this.imageWidth,
