@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipto/home/components/price.dart';
-import 'package:recipto/widgets/my_button.dart';
+import 'package:recipto/home/components/my_button.dart';
 
 class ProductCard extends StatelessWidget {
   final double originalPrice;

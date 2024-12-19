@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipto/home/components/app_bar_content.dart';
-import 'package:recipto/widgets/bottom_sheet.dart';
+import 'package:recipto/home/components/coin_price.dart';
+import 'package:recipto/home/components/bottom_sheet.dart';
 import 'package:recipto/widgets/coupon_card.dart';
 import 'package:recipto/widgets/product_card.dart'; // Import ProductCard
 
@@ -117,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {},
                 icon: const Icon(Icons.arrow_back),
               ),
-              title: const AppBarContent(),
+              title: AppBarContent(),
             ),
             SliverToBoxAdapter(
               child: Padding(

@@ -51,34 +51,35 @@ class CouponCard extends StatelessWidget {
             const SizedBox(height: 10),
             Flexible(
               flex: 1,
-              child: Text(
-                title1,
-                style: const TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w500,
+              child: Center(
+                child: Text(
+                  title1,
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
             ),
             Flexible(
               flex: 1,
-              child: Text(
-                title2,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 12,
-                  color: Colors.black,
+              child: Center(
+                child: Text(
+                  title2,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             Flexible(child: Image.asset('assets/images/dotted.png')),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             Flexible(
               flex: 1,
               child: ElevatedButton(

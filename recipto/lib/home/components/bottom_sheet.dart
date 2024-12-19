@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // Reusable Bottom Navigation Bar Widget
 class MyBottomNavigationBar extends StatelessWidget {
-  const MyBottomNavigationBar({Key? key}) : super(key: key);
+  const MyBottomNavigationBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,9 +63,16 @@ class MyBottomNavigationBar extends StatelessWidget {
           const SizedBox(height: 10),
           Container(
             width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text('Scan Receipt'),
+            height: 50,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              color: const Color(0xFF5764DA), // Blue background color
+            ),
+            child: const Center(
+              child: Text(
+                'Scan Receipt',
+                style: TextStyle(color: Colors.white), // White text color
+              ),
             ),
           ),
         ],
@@ -91,10 +98,4 @@ class MyScreen extends StatelessWidget {
           const MyBottomNavigationBar(), // Use the imported widget
     );
   }
-}
-
-void main() {
-  runApp(const MaterialApp(
-    home: MyScreen(),
-  ));
 }
